@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Container, Grid } from "@material-ui/core";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 function Slide({ images }) {
   const settings = {
@@ -23,7 +24,7 @@ function Slide({ images }) {
               ? images.map((val, key) => {
                   return (
                     <div key={key}>
-                      <img
+                      <Image
                         src={val}
                         style={{
                           width: "100%",

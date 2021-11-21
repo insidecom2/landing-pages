@@ -1,6 +1,7 @@
 import { Grid, Container } from "@material-ui/core";
 import PhoneInTalkRoundedIcon from "@mui/icons-material/PhoneInTalkRounded";
 import Link from "next/link";
+import Image from "next/image";
 
 function Footer({ call, facebook, line }) {
   return (
@@ -8,16 +9,16 @@ function Footer({ call, facebook, line }) {
       <Container className="footerbar">
         <Grid container spacing={2}>
           <Grid item xs={4} style={{ textAlign: "center" }}>
-            <Link href={call}>
+            <a href={call}>
               <PhoneInTalkRoundedIcon
                 style={{ fontSize: "3em" }}
                 className="pointer"
               />
-            </Link>
+            </a>
           </Grid>
           <Grid item xs={4} style={{ textAlign: "center", paddingTop: "10px" }}>
-            <a target="_blank" href={facebook}>
-              <img
+            <a target="_blank" rel="noreferrer" href={facebook}>
+              <Image
                 style={{ width: "40px", height: "40px" }}
                 src="https://cdn.shopify.com/app-store/listing_images/f83699e125ac913c98279b8d5b392fcd/icon/CMqy2cj0lu8CEAE=.png?height=168&width=168"
                 className="pointer"
@@ -25,13 +26,13 @@ function Footer({ call, facebook, line }) {
             </a>
           </Grid>
           <Grid item xs={4} style={{ textAlign: "center" }}>
-            <Link href={line}>
-              <img
+            <a href={line}>
+              <Image
                 style={{ width: "40px", height: "40px" }}
                 src="https://iconape.com/wp-content/png_logo_vector/line-messenger.png"
                 className="pointer"
               />
-            </Link>
+            </a>
           </Grid>
         </Grid>
       </Container>
