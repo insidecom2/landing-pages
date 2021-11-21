@@ -1,8 +1,6 @@
 import { Grid, Container } from "@material-ui/core";
 import Head from "next/head";
 import ReactHtmlParser from "react-html-parser";
-import Carousel from "react-gallery-carousel";
-import "react-gallery-carousel/dist/index.css";
 
 function Index({ content }) {
   return (

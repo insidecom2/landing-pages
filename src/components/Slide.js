@@ -11,39 +11,29 @@ function Slide({ images }) {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
   };
   return (
     <div>
-      <Container>
-        <Grid item xs={12} sm={10} md={8}>
+      <Container style={{ padding: "0px" }}>
+        <Grid item xs={12} sm={12} md={12}>
           <Slider {...settings}>
             {images
               ? images.map((val, key) => {
                   return (
                     <div key={key}>
-                      <img src={val} />
+                      <img
+                        src={val}
+                        style={{
+                          width: "100%",
+                          maxHeight: "500px",
+                        }}
+                      />
                     </div>
                   );
                 })
               : ""}
-            {/* <div>
-              <h3>1</h3>
-            </div>
-            <div>
-              <h3>2</h3>
-            </div>
-            <div>
-              <h3>3</h3>
-            </div>
-            <div>
-              <h3>4</h3>
-            </div>
-            <div>
-              <h3>5</h3>
-            </div>
-            <div>
-              <h3>6</h3>
-            </div> */}
           </Slider>
         </Grid>
       </Container>

@@ -1,8 +1,9 @@
 import { Grid, Container } from "@material-ui/core";
+import Footer from "components/footer";
 import Head from "next/head";
 import ReactHtmlParser from "react-html-parser";
-import { CarouselSlide } from "../src/components/CarouselSlide";
 import Slide from "../src/components/Slide";
+
 function Index({ content }) {
   let images = [];
   images.push("/images/boutique/177486.jpg");
@@ -14,17 +15,22 @@ function Index({ content }) {
         <title>Boutique@Taiwang</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <Container maxWidth="md">
+      <Container maxWidth="md" className="container-main">
         <Grid container spacing={2}>
           <Grid item sm={12} xs={12}>
-            <h1 style={{ textAlign: "center" }}>
+            <h2 style={{ textAlign: "center" }}>
               {ReactHtmlParser(content.title)}
-            </h1>
+            </h2>
             {ReactHtmlParser(content.content)}
             <Slide images={images}></Slide>
           </Grid>
         </Grid>
       </Container>
+      <Footer
+        call="tel:081-8741173"
+        line="https://line.me/ti/p/~Boutiquetaiwang"
+        facebook="https://www.messenger.com/t/102180811340597/"
+      ></Footer>
     </div>
   );
 }
