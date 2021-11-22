@@ -30,12 +30,10 @@ a {
 .footerbar {
   position: fixed;
   bottom: 0px;
-  width: 100%;
   height: 70px;
   padding: 10px;
   background-color: #fff;
-  margin: 0px;
-  max-width: 70ch;
+  max-width: 5120px;
   color: #333;
   border-top: 1px solid #eee;
   box-shadow: 0px -2px 7px #ddd;

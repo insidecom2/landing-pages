@@ -26,10 +26,9 @@ function Slide({ images }) {
                     <div key={key}>
                       <Image
                         src={val}
-                        style={{
-                          width: "100%",
-                          maxHeight: "500px",
-                        }}
+                        layout="responsive"
+                        width={500}
+                        height={400}
                       />
                     </div>
                   );

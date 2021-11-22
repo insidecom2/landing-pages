@@ -6,7 +6,7 @@ import Image from "next/image";
 function Footer({ call, facebook, line }) {
   return (
     <div style={{ paddingTop: "3em;" }}>
-      <Container className="footerbar">
+      <Container maxWidth="xxl" className="footerbar">
         <Grid container spacing={2}>
           <Grid item xs={4} style={{ textAlign: "center" }}>
             <a href={call}>
@@ -19,17 +19,19 @@ function Footer({ call, facebook, line }) {
           <Grid item xs={4} style={{ textAlign: "center", paddingTop: "10px" }}>
             <a target="_blank" rel="noreferrer" href={facebook}>
               <Image
-                style={{ width: "40px", height: "40px" }}
-                src="https://cdn.shopify.com/app-store/listing_images/f83699e125ac913c98279b8d5b392fcd/icon/CMqy2cj0lu8CEAE=.png?height=168&width=168"
+                width={40}
+                height={40}
                 className="pointer"
+                src="/images/facebook-chat.webp"
               />
             </a>
           </Grid>
           <Grid item xs={4} style={{ textAlign: "center" }}>
             <a href={line}>
               <Image
-                style={{ width: "40px", height: "40px" }}
-                src="https://iconape.com/wp-content/png_logo_vector/line-messenger.png"
+                width={40}
+                height={40}
+                src="/images/line-messenger.png"
                 className="pointer"
               />
             </a>
