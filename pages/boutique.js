@@ -18,7 +18,9 @@ function Index({ content }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta
           name="description"
-          content="This is an example of my meta description."
+          content="วิลล่าทั้งหลังและห้องพัก มีระดับ ตกแต่งสไตล์ล้านนาวินเทจ
+              เเถมถ่ายรูปสวย ราคาโดนเเละดีต่อใจ พร้อมสิ่งอำนวยความสะดวกครบครัน
+              บนถนนท้ายวัง ช้างม่อย ใจกลางเมืองเชียงใหม่"
         />
       </Head>
       <Container maxWidth="md" className="container-main">
