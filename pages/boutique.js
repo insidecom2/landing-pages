@@ -3,17 +3,23 @@ import Footer from "components/footer";
 import Head from "next/head";
 import ReactHtmlParser from "react-html-parser";
 import Slide from "../src/components/Slide";
+import Image from "next/image";
 
 function Index({ content }) {
   let images = [];
-  images.push("/images/boutique/177486.jpg");
-  images.push("/images/boutique/177486.jpg");
+  for (let loop = 1; loop < 40; loop++) {
+    images.push(`/images/boutique/${loop}.jpg`);
+  }
 
   return (
     <div>
       <Head>
         <title>Boutique@Taiwang</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+          name="description"
+          content="This is an example of my meta description."
+        />
       </Head>
       <Container maxWidth="md" className="container-main">
         <Grid container spacing={2}>
@@ -21,6 +27,14 @@ function Index({ content }) {
             <h2 style={{ textAlign: "center" }}>
               {ReactHtmlParser(content.title)}
             </h2>
+            <p>
+              <Image
+                src="/images/boutique/1.jpg"
+                width={1000}
+                height={600}
+                layout="responsive"
+              />
+            </p>
             {ReactHtmlParser(content.content)}
             <Slide images={images}></Slide>
           </Grid>
@@ -48,7 +62,7 @@ export async function getServerSideProps() {
               เเถมถ่ายรูปสวย ราคาโดนเเละดีต่อใจ พร้อมสิ่งอำนวยความสะดวกครบครัน
               บนถนนท้ายวัง ช้างม่อย ใจกลางเมืองเชียงใหม่ ใกล้แหล่งช้อปปิ้ง เเละ
               เเหล่งซื้อของฝาก และสถานที่ท่องเที่ยวสำคัญ ประตูท่าเเพร
-              วัดพระสิงห์{" "}
+              วัดพระสิงห์
             </p>
             <p>
               🏠 🖼มีสนาม และพื้นที่กว้างขวาง ภายในบ้านมีLobby พร้อม Free high
@@ -66,7 +80,7 @@ export async function getServerSideProps() {
             <p>
               🚶🏃🍜เดินแค่เอื้อมไปยังตลาดวโรรสและตลาดเมืองใหม่ดอกไม้
               และถนนคนเดินตลาดกลางคืนต้นลำใย ห่างจากสนามบินเเค่ 10 นาที
-              และประตูท่าเเพร เดินไม่ถึง 10 นาที{" "}
+              และประตูท่าเเพร เดินไม่ถึง 10 นาที
             </p>
             <p>
               🍱🍔🍹🍾🎼🎺มีร้านอาหาร สวยๆมากมาย พร้อมดนตรีไพเราะ ริมน้ำปิง
