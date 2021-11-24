@@ -27,4 +27,4 @@ jobs:
             git fetch -p
             git pull origin main
             npm run build
-            npm run start
+            pm2 restart 0 
