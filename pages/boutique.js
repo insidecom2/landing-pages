@@ -4,28 +4,13 @@ import Head from "next/head";
 import ReactHtmlParser from "react-html-parser";
 import Slide from "../src/components/Slide";
 import Image from "next/image";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import FacebookPixel from "../src/components/pixel-boutique.js";
 
 function Index({ content }) {
-  const router = useRouter();
   let images = [];
   for (let loop = 1; loop < 40; loop++) {
     images.push(`/images/boutique/${loop}.jpg`);
   }
-
-  useEffect(() => {
-    import("react-facebook-pixel")
-      .then((x) => x.default)
-      .then((ReactPixel) => {
-        ReactPixel.init("523698222254369"); // facebookPixelId
-        ReactPixel.pageView();
-
-        router.events.on("routeChangeComplete", () => {
-          ReactPixel.pageView();
-        });
-      });
-  }, [router.events]);
 
   return (
     <div>
@@ -38,6 +23,7 @@ function Index({ content }) {
               เเถมถ่ายรูปสวย ราคาโดนเเละดีต่อใจ พร้อมสิ่งอำนวยความสะดวกครบครัน
               บนถนนท้ายวัง ช้างม่อย ใจกลางเมืองเชียงใหม่."
         />
+        <FacebookPixel />
       </Head>
       <Container maxWidth="md" className="container-main">
         <Grid container spacing={2}>
