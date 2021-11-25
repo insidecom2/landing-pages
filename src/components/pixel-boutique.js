@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => (
+const FacebookPix = () => (
   <React.Fragment>
     <script
       dangerouslySetInnerHTML={{
@@ -25,3 +25,5 @@ export default () => (
     />
   </React.Fragment>
 );
+
+export default FacebookPix;

@@ -23,6 +23,7 @@ function Footer({ call, facebook, line }) {
                 height={40}
                 className="pointer"
                 src="/images/facebook-chat.webp"
+                alt="Footer"
               />
             </a>
           </Grid>
@@ -33,6 +34,7 @@ function Footer({ call, facebook, line }) {
                 height={40}
                 src="/images/line-messenger.png"
                 className="pointer"
+                alt="Footer"
               />
             </a>
           </Grid>

@@ -37,6 +37,7 @@ function Index({ content }) {
                 width={1000}
                 height={600}
                 layout="responsive"
+                alt="Slide"
               />
             </p>
             {ReactHtmlParser(content.content)}

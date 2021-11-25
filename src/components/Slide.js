@@ -35,6 +35,7 @@ function Slide({ images }) {
                         width={1000}
                         height={800}
                         layout="responsive"
+                        alt="Slide"
                       />
                     </div>
                   );
