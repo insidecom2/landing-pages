@@ -6,10 +6,24 @@ import Slide from "../src/components/Slide";
 import Image from "next/image";
 
 function Index({ content }) {
+  const router = useRouter();
   let images = [];
   for (let loop = 1; loop < 40; loop++) {
     images.push(`/images/boutique/${loop}.jpg`);
   }
+
+  useEffect(() => {
+    import("react-facebook-pixel")
+      .then((x) => x.default)
+      .then((ReactPixel) => {
+        ReactPixel.init("523698222254369"); // facebookPixelId
+        ReactPixel.pageView();
+
+        router.events.on("routeChangeComplete", () => {
+          ReactPixel.pageView();
+        });
+      });
+  }, [router.events]);
 
   return (
     <div>
