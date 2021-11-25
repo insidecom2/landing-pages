@@ -103,9 +103,9 @@ function Index({ content }) {
               height="315"
               src="https://www.youtube.com/embed/4jc0OMY-7Es"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </Grid>
           <Grid item xs={12} md={12} style={{ textAlign: "center" }}>
@@ -114,9 +114,9 @@ function Index({ content }) {
               height="315"
               src="https://www.youtube.com/embed/o3wgncWWAtw"
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           </Grid>
         </Grid>
