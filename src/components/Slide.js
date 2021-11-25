@@ -7,7 +7,6 @@ import Image from "next/image";
 
 function Slide({ images }) {
   const settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -23,12 +22,19 @@ function Slide({ images }) {
             {images
               ? images.map((val, key) => {
                   return (
-                    <div key={key}>
+                    <div
+                      key={key}
+                      style={{
+                        position: "relative",
+                        width: "100vw",
+                        height: "30vw",
+                      }}
+                    >
                       <Image
                         src={val}
+                        width={1000}
+                        height={800}
                         layout="responsive"
-                        width={500}
-                        height={400}
                       />
                     </div>
                   );
