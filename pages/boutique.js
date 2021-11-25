@@ -4,6 +4,8 @@ import Head from "next/head";
 import ReactHtmlParser from "react-html-parser";
 import Slide from "../src/components/Slide";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 function Index({ content }) {
   const router = useRouter();
