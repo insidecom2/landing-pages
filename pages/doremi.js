@@ -99,7 +99,7 @@ function Index({ content }) {
           </Grid>
           <Grid item xs={12} md={12} style={{ textAlign: "center" }}>
             <iframe
-              width="560"
+              width="100%"
               height="315"
               src="https://www.youtube.com/embed/4jc0OMY-7Es"
               title="YouTube video player"
@@ -110,7 +110,7 @@ function Index({ content }) {
           </Grid>
           <Grid item xs={12} md={12} style={{ textAlign: "center" }}>
             <iframe
-              width="560"
+              width="100%"
               height="315"
               src="https://www.youtube.com/embed/o3wgncWWAtw"
               title="YouTube video player"
