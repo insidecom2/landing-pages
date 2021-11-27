@@ -124,7 +124,7 @@ function Index({ content }) {
       <Footer
         call="tel:0876616864"
         line="https://line.me/ti/p/~0876616864"
-        facebook="https://www.messenger.com/t/102180811340597/"
+        facebook="https://www.messenger.com/t/996936413749193/"
       ></Footer>
     </div>
   );
