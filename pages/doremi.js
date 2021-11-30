@@ -3,6 +3,7 @@ import Head from "next/head";
 import ReactHtmlParser from "react-html-parser";
 import Image from "next/image";
 import Footer from "components/footer";
+import Script from "next/script";
 
 function Index({ content }) {
   return (
@@ -15,6 +16,7 @@ function Index({ content }) {
           content="รับสอนดนตรี เปียโน ไวโอลิน ร้องเพลง เต้น กีตาร์ อคูเลเล่ เรียนแบบ ส่วนตัว "
         />
       </Head>
+
       <Container maxWidth="md" className="container-main">
         <Grid container spacing={2}>
           <Grid item xs={12}>
@@ -123,7 +125,7 @@ function Index({ content }) {
       </Container>
       <Footer
         call="tel:0876616864"
-        line="https://line.me/ti/p/~0876616864"
+        line="https://line.me/ti/p/@doremimusic"
         facebook="https://www.messenger.com/t/996936413749193/"
       ></Footer>
     </div>
@@ -137,8 +139,7 @@ export async function getServerSideProps() {
   content.des = `โดเรมีมิวสิค เราเป็นโรงเรียนดนตรี ในเชียงใหม่ เน้นการเรียนดนตรี การสอนดนตรี โดยประกอบด้วยหลักสูตรได้มาตราฐาน
 รับสมัครตั้งแต่อายุ 4 ปีขึ้นไป การสอนเราเน้นการเรียนแบบตัวต่อตัว เพื่อให้ผู้เรียนได้รับประโยชน์ในการเรียนมากที่สุด
 เราเน้นทั้งทฤษฎีและการปฎิบัติควบคู่กันพร้อมสอดแทรกกิจกรรมให้ผู้เรียนสนุกกับการเรียนไปในตัว
-หลักสูตรเน้นดนตรีด้านคลาสิคเป็นหลักหรือสอดแทรกเพลงที่ผู้เรียนชื่นชอบได้เช่นกัน
-สนใจข้อมูลเพิ่มเติม หรือ จองเวลาเรียน`;
+หลักสูตรเน้นดนตรีด้านคลาสิคเป็นหลักหรือสอดแทรกเพลงที่ผู้เรียนชื่นชอบได้เช่นกัน`;
   return {
     props: {
       content,
